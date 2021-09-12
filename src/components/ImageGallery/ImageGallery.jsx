@@ -1,11 +1,16 @@
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
-import { getImages } from '../../store/request/getImages';
 
-export const ImageGallery = ({ images }) => {
+export const ImageGallery = ({ images, onClick }) => {
   return (
-    <ul className="ImageGallery">
-      <p>IMAGES</p>
-      <ImageGalleryItem />
+    <ul className="ImageGallery" onClick={onClick}>
+      {images.map(image => (
+        <ImageGalleryItem
+          key={image.id}
+          src={image.webformatURL}
+          alt={image.tags}
+          id={image.id}
+        />
+      ))}
     </ul>
   );
 };

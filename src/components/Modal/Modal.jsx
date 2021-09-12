@@ -1,8 +1,10 @@
-export const Modal = ({images}) => {
+import css from './Modal.module.css';
+
+export const Modal = ({ image }) => {
   return (
-    <div className="Overlay">
-      <div className="Modal">
-        <img src="" alt="" />
+    <div className={css.Overlay}>
+      <div className={css.Modal}>
+        <img src={image.largeImageURL} alt={image.tags} />
       </div>
     </div>
   );
