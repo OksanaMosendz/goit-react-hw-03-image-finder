@@ -27,3 +27,9 @@
 .Button:focus {
   background-color: #303f9f;
 }
+
+.LoadMoreBtn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
