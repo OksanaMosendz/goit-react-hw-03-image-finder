@@ -14,8 +14,6 @@ export class SearchBar extends React.Component {
 
   onHandleChangeInput = e => {
     this.setState({ inputValue: e.target.value });
-    console.log(this.state);
-    console.log(this.props);
   };
 
   render() {
